@@ -1,0 +1,17 @@
+# This file can be used to change the arguments
+# passed to the registrator daemon.
+
+# Path to the Docker socket. Default is /var/run/docker.sock
+#DOCKER_HOST=
+
+# Path to write logs. Default is /var/log/registrator/registrator.log
+#LOG_FILE=
+
+# Allows for overriding the host name used by registrtor
+#HOSTNAME=
+
+# Set the registry URI. Default is 'consul:127.0.0.1:8500'
+#REGISTRY_URI=
+
+# Additional flags can be passed to the registrator.
+#REGISTRATOR_FLAGS=
