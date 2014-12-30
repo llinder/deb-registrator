@@ -1,7 +1,7 @@
 description "Docker Registrator service"
 
-start on runlevel [2345]
-stop on runlevel [!2345]
+start on (started consul or started etcd)
+stop on (stopping consul or stopping etcd)
 
 respawn
 
@@ -20,6 +20,9 @@ script
   if [ -f "/etc/default/registrator" ]; then
     . /etc/default/registrator
   fi
+
+  # short pause to allow dependent service to bootstrap
+  sleep 3
 
   exec /usr/bin/registrator $REGISTRATOR_FLAGS $REGISTRY_URI >> $LOG_FILE 2>&1
 end script

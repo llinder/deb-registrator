@@ -19,7 +19,7 @@
 BASE_DIR  = $(CURDIR)/pkg
 SRC_DIR   = $(BASE_DIR)/checkout/src/github.com/llinder/registrator
 DISTRO   ?= $(shell lsb_release -sc)
-REVISION ?= 1~$(DISTRO)1~ppa1
+REVISION ?= 1~$(DISTRO)1~ppa2
 MODIFIER ?= 
 CHANGE   ?= "New upstream release."
 PBUILDER ?= cowbuilder

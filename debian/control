@@ -11,7 +11,7 @@ Build-Depends: debhelper (>= 9), golang-go (>= 2:1.2), git
 Package: registrator
 Architecture: any
 Recommends: lxc-docker (>=1.3)
-Depends: ${misc:Depends}
+Depends: ${misc:Depends}, consul | etcd
 Description: Service registry bridge for Docker
  Registrator automatically register/deregisters services for 
  Docker containers based on published ports and metadata from 
